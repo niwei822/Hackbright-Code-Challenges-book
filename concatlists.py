@@ -20,6 +20,9 @@ It should work if either list is empty::
 
 def concat_lists(list1, list2):
     """Combine lists."""
+    for num in list2:
+        list1.append(num)
+    return list1
 
 
 if __name__ == '__main__':

@@ -29,10 +29,21 @@ Examples::
 
 def is_anagram_of_palindrome(word):
     """Is the word an anagram of a palindrome?"""
+    chars = {}
+    count = 0
+    for char in word:
+        chars[char] = chars.get(char,0) + 1
+    for i in chars.values():
+        if i % 2 != 0:
+            count += 1
+    if count <= 1:
+        return True
+    return False
 
 
-if __name__ == '__main__':
-    import doctest
+# if __name__ == '__main__':
+#     import doctest
 
-    if doctest.testmod().failed == 0:
-        print("\n*** ALL TEST PASSED. AWESOMESAUCE!\n")
+#     if doctest.testmod().failed == 0:
+#         print("\n*** ALL TEST PASSED. AWESOMESAUCE!\n")
+#print(is_anagram_of_palindrome("ab"))
