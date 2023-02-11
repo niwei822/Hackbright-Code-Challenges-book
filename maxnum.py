@@ -24,6 +24,14 @@ For example::
 
 def max_num(num_list):
     """Returns largest integer from given list"""
+    if len(num_list) == 1:
+        return num_list[0]
+    max_number = num_list[1]
+    for num in num_list:
+        if num > max_number:
+            max_number = num
+    return max_number
+            
 
 
 if __name__ == '__main__':

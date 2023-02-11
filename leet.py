@@ -13,6 +13,19 @@ For example::
 
 def translate_leet(phrase):
     """Translates input into "leet-speak"."""
+    translated = ""
+    leet_speak = {
+        'a': '@',
+        'o': '0',
+        'e': '3',
+        'l': '1',
+        's': '5',
+        't': '7',
+    }
+    for i in phrase:
+        translated += leet_speak.get(i.lower(), i)
+    return translated
+                
 
 
 if __name__ == '__main__':

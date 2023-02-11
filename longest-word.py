@@ -13,6 +13,10 @@ For example::
 
 def find_longest_word(words):
     """Return longest word in list of words."""
+    counts = []
+    for word in words:
+        counts.append(len(word))
+    return max(counts)
 
 
 if __name__ == '__main__':
