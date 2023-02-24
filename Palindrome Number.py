@@ -14,6 +14,14 @@ def isPalindrome(num):
         num = num // 10
     return n == rev
     
+# Reverse the right half of the digits
+# 6	    rev = 0
+# 7	    while num > rev:
+# 8	        rev = rev * 10 + num % 10
+# 9	        num = num // 10
+# 10	
+# 11	    # Compare the reversed right half to the left half
+# 12	    return num == rev or num == rev // 10
 
+#print(isPalindrome(1234))
 
-print(isPalindrome(1234))
