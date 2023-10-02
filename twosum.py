@@ -8,9 +8,10 @@ def two_sum(nums, target):
     """return index of two number"""
     result = {}
     for index, num in enumerate(nums):
-        if target - num in result:
-            return [result[target - num], index]
+        diff = target - num
+        if diff in result:
+            return [result[diff], index]
         result[num] = index
     
-#print(two_sum([2,3,4], 6))
+print(two_sum([2,3,4], 5))
     
